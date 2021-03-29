@@ -22,8 +22,8 @@ if (cookieValue == null) {
 		action="<%= request.getContextPath() %>/cookies">
 		<label for="example">Cookie Value</label>
 		<input type="text" name="example"
-		 id="example"
-		 value="<%= cookieValue %>">
+		 	id="example"
+		 	value="<%= cookieValue %>">
 		<input type="submit" value="쿠키 설정" />
 	</form>
 	
