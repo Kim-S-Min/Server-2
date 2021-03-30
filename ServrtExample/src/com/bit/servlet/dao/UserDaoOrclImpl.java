@@ -9,7 +9,7 @@ public class UserDaoOrclImpl implements UserDao {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
-			conn = DriverManager.getConnection(dburl, "C##NAMSK", "1234");
+			conn = DriverManager.getConnection(dburl, "C##KSMIN", "1234");
 		} catch (ClassNotFoundException e) {
 			System.err.println("드라이버 로드 실패!");
 		}
