@@ -2,13 +2,11 @@
     pageEncoding="UTF-8"%>
     
 <!-- 다른 페이지의 파일을 포함 -->
-<!-- include : 별도의 서블릿이 아니고 본 JSP -->
+<!-- include: 별도의 서블릿이 아니고 본 JSP 내에 포함되어 컴파일 -->
 <%@ include file="/WEB-INF/views/includes/header.jsp" %>
-
-<!-- jsp:include는 JSP에 포함하여 컴하일하지 않고
+<!-- jsp:include는 JSP에 포함하여 컴파일하지 않고
 별도의 서블릿(or JSP)에 요청을 전달하는 것 -->
 <jsp:include page="/WEB-INF/views/includes/nav.jsp" />
-
 	<!-- h3>Static HTML Page</h3>
 	<p>이것은 정적 HTML로 작성된 페이지입니다</p -->
 	
@@ -62,10 +60,10 @@
 	<p>
 		<a href="el">이메일리스트(MVC)</a>
 	</p>
-
+	
 	<h3>Cookie Test</h3>
 	<p>
-		<a href="<%= request.getContextPath() %>/cookies">쿠키테스트</a>
+		<a href="<%= request.getContextPath() %>/cookies">쿠키 테스트</a>
 	</p>
-	
+
 <%@ include file="/WEB-INF/views/includes/footer.jsp" %>
