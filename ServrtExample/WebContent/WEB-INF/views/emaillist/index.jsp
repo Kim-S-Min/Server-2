@@ -8,12 +8,23 @@
 <head>
 <meta charset="UTF-8">
 <title>메일링 리스트 확인</title>
+<script>
+function confirmDelete(form) {
+	//	폼을 확인
+	//	console.log(form);
+	//	confirm 창 띄우기
+	var result = confirm("삭제하시겠습니까?");
+	//	submit 이벤트 결과가 true -> 전송
+	//					false -> 전송 취소
+	return result;
+}
+</script>
 </head>
 <body>
 	<h1>메일링 리스트(Model 2)</h1>
 	<c:forEach items="${ list }" var="vo">
 
-				<!-- 정보 테이블 -->
+		<!-- 정보 테이블 -->
 	<table border=1>
 		<tr>
 			<th>성</th>
@@ -30,21 +41,23 @@
 		<!-- 삭제 버튼 -->
 		<tr>
 			<td colspan="2">
-				<form action="<c:url value="/el"/>">
+				<form action="<c:url value="/el"/>" 
+					onsubmit="return confirmDelete(this);">
 					<input type="hidden" name="a" value="delete" />
 					<!-- 게시물의 no(PK) -->
 					<input type="hidden" name="no" value="${ vo.no }"/>
 					<!-- 전송 버튼 -->
 					<input type="submit" value="삭제" />
-				</form>	
+				</form>
+				<!-- TODO: 수정 기능을 구현해보기 -->
 			</td>
 		</tr>
-	</table>	
-
+	</table>		
+	
 	</c:forEach>
-
+	
 	<p>
-		<a href="<c:url value="/el?a=form"/>">메일링 리스트 가입(MVC)</a>
+		<a href="<c:url value="/el?a=form" />">메일링 리스트 가입(MVC)</a>
 	</p>
 
 	

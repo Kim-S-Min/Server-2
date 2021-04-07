@@ -19,8 +19,6 @@ import com.bit.servlet.dao.EmailVo;
 
 @WebServlet(name="Emaillist", urlPatterns="/el")
 public class EmaillistServlet extends HttpServlet {
-
-	
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -85,6 +83,4 @@ public class EmaillistServlet extends HttpServlet {
 			doGet(req, resp);
 		}
 	}
-
-	
 }
